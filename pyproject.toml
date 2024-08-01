@@ -20,8 +20,8 @@ authors = [
 
 readme = 'README.md'
 
-repository = "https://github.com/exasol/harlequin-exasol"
-homepage = "https://github.com/exasol/harlequin-exasol"
+repository = "https://github.com/nicoretti/harlequin-exasol"
+homepage = "https://github.com/nicoretti/harlequin-exasol"
 
 keywords = ['exasol', 'harlequin']
 
