@@ -1,0 +1,79 @@
+[build-system]
+requires = [
+    "poetry>=1.0.0",
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "harlequin-exasol"
+packages  = [
+    {include = "exasol"},
+]
+version = "0.1.0"
+description = "Harelequin adapter for Exasol"
+
+license = "MIT"
+
+authors = [
+    "Nicola Coretti <nicola.coretti@exasol.com>"
+]
+
+readme = 'README.md'
+
+repository = "https://github.com/exasol/harlequin-exasol"
+homepage = "https://github.com/exasol/harlequin-exasol"
+
+keywords = ['exasol', 'harlequin']
+
+[tool.poetry.plugins."harlequin.adapter"]
+exasol = "exasol.harlequin:Exasol"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+harlequin = "^1.22.1"
+pyexasol = ">=0.26.0"
+
+[tool.poetry.group.dev.dependencies]
+exasol-toolbox = ">=0.12.0"
+textual-dev = "^1.5.1"
+
+[tool.coverage.run]
+source = [
+    "exasol",
+]
+
+[tool.coverage.report]
+fail_under = 15
+
+
+[tool.black]
+line-length = 88
+verbose = false
+include = "\\.pyi?$"
+
+
+[tool.isort]
+profile = "black"
+force_grid_wrap = 2
+
+
+[tool.pylint.master]
+fail-under = 5.0
+output-format = "colorized,json:.lint.json,text:.lint.txt"
+
+[tool.pylint.format]
+max-line-length = 88
+max-module-lines = 800
+
+[tool.mypy]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+    "test.*",
+]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+xfail_strict = true
