@@ -41,10 +41,10 @@ Harelequin adapter for Exasol
 
 ### 💾 Installation
 
-Install the package using `pipx` or `pip`:
+Install the package using `pipx`:
 
 ```shell
-pipx install harlequin-exasol
+pipx install harlequin-exasol --include-deps
 ```
 
 ### ▶️ Starting Harlequin
