@@ -76,6 +76,16 @@ Details about Harlequin can be found on the [official website](https://harlequin
 - [Configuration](https://harlequin.sh/docs/config-file)
 - [Theming](https://harlequin.sh/docs/themes)
 
+## 💥 Known Issues
+
+* Queries cannot be sent while metadata is loading. (@exaSR)
+* Only empty error windows will be shown. (Multiple Reports)
+
+
+## 💡 Ideas
+
+* (upstream) Make it possible to disable or toggle the datacatalogue tab to increase available space for power users (@exaSR)
+
 ## 📝 Todo's
 
 * Investigate dbapi2 issue with parameters in the prepared statement where clause (`exasol.driver.dbapi2`):
@@ -100,3 +110,5 @@ Details about Harlequin can be found on the [official website](https://harlequin
 * Add/Update unit/integration tests.
 * Add CI/CD.
 * Contact the maintainer of Harlequin to mention Exasol support on the [Harlequin website](https://harlequin.sh).
+
+
